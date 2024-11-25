@@ -59,12 +59,7 @@ const InfoForm = () => {
 
                 <div className={styles.field}>
                     <label>Рік народження:</label>
-                    <input
-                        type="text"
-                        {...register('birthYear', {required: 'Це поле обов\'язкове'})}
-                        className={errors.birthYear && styles.error}
-                    />
-                    {errors.birthYear && <span>{errors.birthYear.message}</span>}
+                    <input type="text"{...register('birthYear')}/>
                 </div>
 
                 <div className={styles.field}>
@@ -75,7 +70,7 @@ const InfoForm = () => {
                 <div className={styles.field}>
                     <label>Інформація:</label>
                     <textarea
-                        {...register('info', {maxLength: {value: 800, message: 'Максимум 800 символів'}})}
+                        {...register('info', {maxLength: {value: 5000, message: 'Максимум 5000 символів'}})}
                         className={errors.info && styles.error}
                     />
                     {errors.info && <span>{errors.info.message}</span>}
