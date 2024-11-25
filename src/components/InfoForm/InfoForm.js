@@ -60,7 +60,7 @@ const InfoForm = () => {
                 <div className={styles.field}>
                     <label>Рік народження:</label>
                     <input
-                        type="number"
+                        type="text"
                         {...register('birthYear', {required: 'Це поле обов\'язкове'})}
                         className={errors.birthYear && styles.error}
                     />
@@ -69,7 +69,7 @@ const InfoForm = () => {
 
                 <div className={styles.field}>
                     <label>Рік смерті (якщо є):</label>
-                    <input type="number" {...register('deathYear')} />
+                    <input type="text" {...register('deathYear')} />
                 </div>
 
                 <div className={styles.field}>
