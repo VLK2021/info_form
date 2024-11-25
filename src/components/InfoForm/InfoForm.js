@@ -7,9 +7,6 @@ import styles from './InfoForm.module.css';
 const TELEGRAM_BOT_TOKEN = process.env.REACT_APP_TELEGRAM_BOT_TOKEN;
 const CHAT_ID = process.env.REACT_APP_TELEGRAM_CHAT_ID;
 
-console.log(TELEGRAM_BOT_TOKEN);
-console.log(CHAT_ID);
-
 
 const InfoForm = () => {
     const {register, handleSubmit, reset, formState: {errors}} = useForm();
