@@ -15,8 +15,8 @@ const InfoForm = () => {
         const message = `
       📋 Нова інформація:
       - Повне ім'я: ${data.fullName}
-      - Рік народження: ${data.birthYear}
-      - Рік смерті: ${data.deathYear || 'Не вказано'}
+      - Дата народження: ${data.birthYear || 'Не вказано'}
+      - Дата смерті: ${data.deathYear || 'Не вказано'}
       - Інформація: ${data.info || 'Не вказано'}
       - Хто надав інформацію: ${data.person || 'Не вказано'}
     `;
@@ -55,12 +55,12 @@ const InfoForm = () => {
                 </div>
 
                 <div className={styles.field}>
-                    <label>Рік народження:</label>
+                    <label>Дата народження:</label>
                     <input type="text"{...register('birthYear')}/>
                 </div>
 
                 <div className={styles.field}>
-                    <label>Рік смерті (якщо є):</label>
+                    <label>Дата смерті (якщо є):</label>
                     <input type="text" {...register('deathYear')} />
                 </div>
 
